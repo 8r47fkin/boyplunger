@@ -4,15 +4,51 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- Custom CSS -->
     <link rel="stylesheet" href="./css/style.css">
     <title>Boy Plunger</title>
     <link id='favicon' rel="shortcut icon" href="/images/favicon.ico" type="image/x-png">
     <link
   </head>
   <body>
-    <canvas id="canvas" width="1920" height="1080">
-    </canvas>
+    <div id="app">
+        <div id="prize">
+          <div id="prize-lines" class="prize-filter"></div>
+          <div id="prize-shadow" class="prize-filter"></div>
+          <h2 id="prize-label">
+            <span class="asterisk">*</span>
+            <span>Rollo Rape</span>
+            <span class="asterisk">*</span>      
+          </h2>
+          <h1 id="prize-text"></h1>
+        </div>
+        
+        <div id="shapes">
+          <i class="fa-regular fa-circle"></i>
+          <i class="fa-regular fa-square"></i>
+          <i class="fa-regular fa-triangle"></i>
+        </div>
+        
+        <div id="actions-wrapper">
+          <div id="actions">
+            <div id="theme-actions">
+              <button class="theme-button" data-theme="green" data-selected="true" onclick="handleChangeTheme(event)">
+                <i class="fa-regular fa-circle"></i>
+              </button>
+              <button class="theme-button" data-theme="blue" onclick="handleChangeTheme(event)">
+                <i class="fa-regular fa-square"></i>
+              </button>
+              <button class="theme-button" data-theme="pink" onclick="handleChangeTheme(event)">
+                <i class="fa-regular fa-triangle"></i>
+              </button>
+            </div>
+            <button id="redo-button" type="button" onclick="handleRedo()">
+              <i class="fa-solid fa-arrows-repeat"></i>
+              <span>SPIN Again</span>
+            </button>
+          </div>
+        </div>
+      </div>
 
+    <script src="script.js"></script>
   </body>
 </html>
